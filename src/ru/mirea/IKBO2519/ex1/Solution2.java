@@ -1,21 +1,18 @@
 package ru.mirea.IKBO2519.ex1;
-public class Solution2 {
-    public static int recursion(int n,int q)
+
+public class Solution2
+{
+    public static String recursion(int n)
     {
-        if (q!=n)
+        if (n == 1)
         {
-            System.out.print(q);
-            q++;
-        return recursion(n,q);
+            return "1";
         }
-        else
-        {
-            return n;
-        }
+        return recursion(n - 1) + " " + n;
     }
 
-    public static void main(String[] args) {
-        int q =1;
-        System.out.println(recursion(5,1));
+    public static void main(String[] args)
+    {
+        System.out.println(recursion(10));
     }
 }
